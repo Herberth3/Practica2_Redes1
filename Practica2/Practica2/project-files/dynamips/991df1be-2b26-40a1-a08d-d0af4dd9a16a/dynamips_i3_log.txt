@@ -1,0 +1,24 @@
+Mar 29 21:43:13.457 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Mar 29 21:43:13.459 HYPERVISOR: Started on IP = localhost, TCP port = 57483.
+Mar 29 21:43:13.941 HYPERVISOR: exec_cmd: hypervisor version 
+Mar 29 21:43:13.942 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\MI PC\GNS3\projects\Practica2\project-files\dynamips 
+Mar 29 21:43:13.943 GENERAL: working_dir=C:\Users\MI PC\GNS3\projects\Practica2\project-files\dynamips
+Mar 29 21:43:13.943 HYPERVISOR: exec_cmd: ethsw create Switch3 
+Mar 29 21:43:16.127 HYPERVISOR: exec_cmd: nio create_udp udp-04c9ae53-45b1-4adc-bb97-2bbe351c31bc 10004 127.0.0.1 10005 
+Mar 29 21:43:16.127 HYPERVISOR: exec_cmd: ethsw add_nio Switch3 udp-04c9ae53-45b1-4adc-bb97-2bbe351c31bc 
+Mar 29 21:43:16.139 HYPERVISOR: exec_cmd: ethsw set_access_port Switch3 udp-04c9ae53-45b1-4adc-bb97-2bbe351c31bc 1 
+Mar 29 21:43:16.220 HYPERVISOR: exec_cmd: nio create_udp udp-7bebb33b-3a6e-4798-b907-2ff81d1c06a7 10006 127.0.0.1 10007 
+Mar 29 21:43:16.220 HYPERVISOR: exec_cmd: ethsw add_nio Switch3 udp-7bebb33b-3a6e-4798-b907-2ff81d1c06a7 
+Mar 29 21:43:16.234 HYPERVISOR: exec_cmd: ethsw set_access_port Switch3 udp-7bebb33b-3a6e-4798-b907-2ff81d1c06a7 1 
+Mar 29 21:43:44.562 HYPERVISOR: exec_cmd: nio create_udp udp-c92c2b17-4b3e-4869-bfaf-b062221b6cbb 10026 127.0.0.1 10027 
+Mar 29 21:43:44.563 HYPERVISOR: exec_cmd: ethsw add_nio Switch3 udp-c92c2b17-4b3e-4869-bfaf-b062221b6cbb 
+Mar 29 21:43:44.589 HYPERVISOR: exec_cmd: ethsw set_dot1q_port Switch3 udp-c92c2b17-4b3e-4869-bfaf-b062221b6cbb 1 
+Mar 30 00:07:48.870 HYPERVISOR: exec_cmd: nio bind_filter udp-7bebb33b-3a6e-4798-b907-2ff81d1c06a7 2 capture 
+Mar 30 00:07:48.871 HYPERVISOR: exec_cmd: nio setup_filter udp-7bebb33b-3a6e-4798-b907-2ff81d1c06a7 2 en10mb C:\Users\MI PC\GNS3\projects\Practica2\project-files\captures\Switch3_Ethernet2_to_PC5_Ethernet0.pcap 
+Mar 30 00:10:02.263 HYPERVISOR: exec_cmd: nio unbind_filter udp-7bebb33b-3a6e-4798-b907-2ff81d1c06a7 2 
+Mar 30 00:10:37.169 HYPERVISOR: exec_cmd: nio bind_filter udp-04c9ae53-45b1-4adc-bb97-2bbe351c31bc 2 capture 
+Mar 30 00:10:37.169 HYPERVISOR: exec_cmd: nio setup_filter udp-04c9ae53-45b1-4adc-bb97-2bbe351c31bc 2 en10mb C:\Users\MI PC\GNS3\projects\Practica2\project-files\captures\Switch3_Ethernet1_to_PC6_Ethernet0.pcap 
+Mar 30 01:08:56.825 HYPERVISOR: exec_cmd: ethsw delete Switch3 
+Mar 30 01:08:56.902 HYPERVISOR: exec_cmd: hypervisor stop 
+Mar 30 01:08:57.405 HYPERVISOR: Stopped.
+Mar 30 01:08:57.406 GENERAL: reset done.
