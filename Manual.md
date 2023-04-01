@@ -82,8 +82,10 @@ Se debe configurar el puerto fastethernet correspondiente a la conexión con el 
 Se deben configurar los puestos seriales en los routers. (NM-4T) en el slot correspondiente a cada router.
  - Slot 1
 <img src='./img/serial_R1.png'>
+
  - Slot 2
 <img src='./img/serial_R2.png'>
+
  - Slot 3
 <img src='./img/serial_R3.png'>
 
@@ -118,107 +120,112 @@ Se deben configurar los puestos seriales en los routers. (NM-4T) en el slot corr
 
 ### COMANDOS ROUTERS (interfaces de comunicacion con los switches)
  - R1
-   configure terminal
-   interface f0/0
-   ip address 192.168.152.1 255.255.255.0
-   no shutdown
-   exit
+   - configure terminal
+   - interface f0/0
+   - ip address 192.168.152.1 255.255.255.0
+   - no shutdown
+   - exit
  - R2
-   configure terminal
-   interface f0/0
-   ip address 192.168.153.1 255.255.255.0
-   no shutdown
-   exit
+   - configure terminal
+   - interface f0/0
+   - ip address 192.168.153.1 255.255.255.0
+   - no shutdown
+   - exit
  - R3
-   configure terminal
-   interface f0/0
-   ip address 192.168.151.1 255.255.255.0
-   no shutdown
-   exit
+   - configure terminal
+   - interface f0/0
+   - ip address 192.168.151.1 255.255.255.0
+   - no shutdown
+   - exit
 
 ### COMANDOS ROUTERS (interfaces de comunicacion con las VPCs)
  - R1->R2
-   configure terminal
-   interface s1/0
-   ip address 172.151.0.1 255.255.0.0
-   no shutdown
-   exit
+   - configure terminal
+   - interface s1/0
+   - ip address 172.151.0.1 255.255.0.0
+   - no shutdown
+   - exit
  - R2->R1
-   configure terminal
-   interface s2/0
-   ip address 172.151.0.2 255.255.0.0
-   no shutdown
-   exit
+   - configure terminal
+   - interface s2/0
+   - ip address 172.151.0.2 255.255.0.0
+   - no shutdown
+   - exit
  - R1->R3
-   configure terminal
-   interface s1/1
-   ip address 172.152.0.1 255.255.0.0
-   no shutdown
-   exit
+   - configure terminal
+   - interface s1/1
+   - ip address 172.152.0.1 255.255.0.0
+   - no shutdown
+   - exit
  - R3->R1
-   configure terminal
-   interface s3/0
-   ip address 172.152.0.2 255.255.0.0
-   no shutdown
-   exit
+   - configure terminal
+   - interface s3/0
+   - ip address 172.152.0.2 255.255.0.0
+   - no shutdown
+   - exit
  - R3->R2
-   configure terminal
-   interface s3/1
-   ip address 172.153.0.1 255.255.0.0
-   no shutdown
-   exit
+   - configure terminal
+   - interface s3/1
+   - ip address 172.153.0.1 255.255.0.0
+   - no shutdown
+   - exit
  - R2->R3
-   configure terminal
-   interface s2/1
-   ip address 172.153.0.2 255.255.0.0
-   no shutdown
-   exit
+   - configure terminal
+   - interface s2/1
+   - ip address 172.153.0.2 255.255.0.0
+   - no shutdown
+   - exit
 
 ### COMANDOS ROUTERS (enrutamiento estatico)
  - R1->R2
-   configure terminal
-   ip route 192.168.153.0 255.255.255.0 172.151.0.2
-   exit
+   - configure terminal
+   - ip route 192.168.153.0 255.255.255.0 172.151.0.2
+   - exit
  - R2->R1
-   configure terminal
-   ip route 192.168.152.0 255.255.255.0 172.151.0.1
-   exit
+   - configure terminal
+   - ip route 192.168.152.0 255.255.255.0 172.151.0.1
+   - exit
  - R1->R3
-   configure terminal
-   ip route 192.168.151.0 255.255.255.0 172.152.0.2
-   exit
+   - configure terminal
+   - ip route 192.168.151.0 255.255.255.0 172.152.0.2
+   - exit
  - R3->R1
-   configure terminal
-   ip route 192.168.152.0 255.255.255.0 172.152.0.1
-   exit
+   - configure terminal
+   - ip route 192.168.152.0 255.255.255.0 172.152.0.1
+   - exit
  - R3->R2
-   configure terminal
-   ip route 192.168.153.0 255.255.255.0 172.153.0.2
-   exit
+   - configure terminal
+   - ip route 192.168.153.0 255.255.255.0 172.153.0.2
+   - exit
  - R2->R3
-   configure terminal
-   ip route 192.168.151.0 255.255.255.0 172.153.0.1
-   exit
+   - configure terminal
+   - ip route 192.168.151.0 255.255.255.0 172.153.0.1
+   - exit
  
 ## TABLAS DE RUTEO
 Muestra de las tablas con 'sh ip int br' y 'sh ip route'
 - R1
 <img src='./img/ruteo_R1.png'>
+
 - R2
 <img src='./img/ruteo_R2.png'>
+
 - R3
 <img src='./img/ruteo_R3.png'>
 
 ## PING ENTRE MAQUINAS
-- PC4
+- PC1
 <img src='./img/ping_4.png'>
+
 - PC6
 <img src='./img/ping_6.png'>
 
 ## CAPTURA DE PAQUETES CON WIRESHARK
 - Seleccionar el cable a capturar la data
 <img src='./img/wireshark_1.png'>
+
 - Nombrar la recoleccion de la data
 <img src='./img/wireshark_2.png'>
+
 - Hacer ping para generar trafico entre VPCs
 <img src='./img/wireshark_3.png'>
